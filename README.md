@@ -131,8 +131,6 @@ Add a new datasource to Grafana.
 - Mode: `server`
 - Pointing to http://prometheus:9090
 
-![](imgs/grafana-setup-datasource.png)
-
 ## 6 - Hand-made dashboard
 
 Add a new dashboard to Grafana.
@@ -153,8 +151,6 @@ Create a graph showing current memory usage.
 
 Grafana should be displaying graph in %, such as:
 
-![](imgs/grafana-graph-percent.png)
-
 <details>
   <summary>💡 Solution</summary>
 
@@ -167,8 +163,6 @@ In the same dashboard, add a new graph for CPU load (1min, 5min, 15min).
 
 Tips: you will need a new metric prefixed by `node_`.
 
-![](imgs/grafana-cpu-load.png)
-
 <details>
   <summary>💡 Solution</summary>
 
@@ -180,8 +174,6 @@ Tips: you will need a new metric prefixed by `node_`.
 In the same dashboard, add a new graph for `sda` disk usage (ko written per second).
 
 You will need `rate()` PromQL function: [https://prometheus.io/docs/prometheus/latest/querying/functions/#rate](https://prometheus.io/docs/prometheus/latest/querying/functions/#rate)
-
-![](imgs/grafana-disk-load.png)
 
 <details>
   <summary>💡 Solution</summary>
@@ -200,8 +192,6 @@ Let's import a dashboard from Grafana website.
 - Or both ;)
 
 Those dashboards are only compatible with Prometheus data-source and node-exporter.
-
-![](imgs/grafana-community-dash.png)
 
 ## 8 - Monitor services: nginx, postgresql...
 
@@ -277,8 +267,6 @@ Display 2 graphs:
 - number of 4xx http requests per second
 
 Tips: you should use `sum by(<label>) (<metric>)` and `irate(<metric>)` (cf PromQL doc).
-
-![](imgs/grafana-nginx-404.png)
 
 <details>
   <summary>💡 Solution</summary>
@@ -362,8 +350,6 @@ With `user_count{}` and `post_per_user_count{id,email}` metrics, build following
 
 Simple graph of users signup (`rate(<metric>)`):
 
-![imgs/grafana-user-signups.png](imgs/grafana-user-signups.png)
-
 Heatmap of signups (`increase(<metric>)`):
 
 ```
@@ -371,11 +357,7 @@ docker-compose exec grafana grafana-cli plugins install petrslavotinek-carpetplo
 docker-compose restart grafana
 ```
 
-![](imgs/grafana-heatmap-signups.png)
-
 Table of top 10 users per post count (`topk()`, `sum by(<label>) (<metric>)`):
-
-![](imgs/grafana-table-top-contributors.png)
 
 <details>
   <summary>💡 Solution</summary>
