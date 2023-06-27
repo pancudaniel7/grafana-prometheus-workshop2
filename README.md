@@ -143,6 +143,8 @@ Create a graph showing current memory usage.
   <summary>💡 Solution</summary>
 
   Query: `(node_memory_MemTotal_bytes{} - node_memory_MemFree_bytes{}) / node_memory_MemTotal_bytes{} * 100`
+
+  ![](imgs/grafana-new-metric.png)
 </details>
 
 ### 6.1 - Some formatting
@@ -151,6 +153,8 @@ Grafana should be displaying graph in %, such as:
 
 <details>
   <summary>💡 Solution</summary>
+
+  ![](imgs/grafana-set-unit.png)
 </details>
 
 ### 6.2 - CPU load
@@ -161,6 +165,8 @@ Tips: you will need a new metric prefixed by `node_`.
 
 <details>
   <summary>💡 Solution</summary>
+
+  ![](imgs/grafana-set-cpu-load-metrics.png)
 </details>
 
 ### 6.3 - Disk usage
