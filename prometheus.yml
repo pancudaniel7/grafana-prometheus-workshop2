@@ -1,5 +1,4 @@
 global:
-  # default scrape_interval
   scrape_interval: 30s
 
 scrape_configs:
