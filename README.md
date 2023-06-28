@@ -124,7 +124,7 @@ Uncomment grafana in docker-compose.yml and launch it:
 docker-compose up -d grafana
 ```
 
-Open [http://localhost:3000](http://localhost:3000) (user: grep / pass: demo).
+Open [http://localhost:3000](http://localhost:3000) (user: pragma / pass: reddog).
 
 Add a new datasource to Grafana.
 
