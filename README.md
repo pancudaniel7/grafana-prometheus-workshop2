@@ -6,7 +6,7 @@
 ### Full setup (with workshop solutions)
 
 - Prometheus: [http://workshop.grep.to:9090](http://workshop.grep.to:9090)
-- Grafana: [http://workshop.grep.to:3000](http://workshop.grep.to:3000) (user: grep / pass: demo)
+- Grafana: [http://workshop.grep.to:3000](http://workshop.grep.to:3000) (user: pragma / pass: reddog)
 - Node-Exporter: [http://workshop.grep.to:9100/metrics](http://workshop.grep.to:9100/metrics)
 - PostgreSQL (2 tables): postgres://workshop:workshop@workshop.grep.to:5432/workshop
 - Postgresql-Exporter: [http://workshop.grep.to:9187/metrics](http://workshop.grep.to:9187/metrics)
